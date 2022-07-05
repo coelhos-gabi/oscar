@@ -1,5 +1,7 @@
 package org.example.model;
 
+import java.util.Objects;
+
 public class DadosOscar {
     private int index;
     private int year;
@@ -21,5 +23,18 @@ public class DadosOscar {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        DadosOscar that = (DadosOscar) o;
+        return name.equals(that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }

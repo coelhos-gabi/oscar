@@ -10,14 +10,14 @@ public class JoinDatasets {
         BufferedWriter writer = new BufferedWriter(new FileWriter("/home/gabrielacoelho/Área de Trabalho/ProjetosJava/oscar/src/main/resources/oscar_age.csv"));
         String linha = reader.readLine();
         while (linha != null){
-            writer.write((linha+"\n").replaceAll(" ",""));
+            writer.write((linha+"\n").replaceAll("; ",";"));
             linha = reader.readLine();
         }
         reader.close();
         linha = reader2.readLine();
         linha = reader2.readLine();
         while(linha != null){
-            writer.write((linha + "\n").replaceAll(" ",""));
+            writer.write((linha + "\n").replaceAll("; ",";"));
             linha = reader2.readLine();
         }
         reader2.close();

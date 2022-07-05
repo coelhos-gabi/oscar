@@ -7,7 +7,7 @@ import java.util.function.Function;
 public class DadosOscarMapper implements Function<String, DadosOscar> {
     @Override
     public DadosOscar apply(String s) {
-        var dadosLinha = s.split(";");
+        var dadosLinha = s.split("; ");
         int index = Integer.parseInt(dadosLinha[0]);
         String stringYear = dadosLinha[1];
         int year = Integer.parseInt(stringYear);
