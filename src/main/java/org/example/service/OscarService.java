@@ -40,8 +40,9 @@ public class OscarService {
         oscarFile.stream()
                 .filter(ator -> ator.getAge() >= 18 && ator.getAge() <= 24)
                 .collect(Collectors.groupingBy(DadosOscar::getName, Collectors.counting()))
-                .entrySet().stream()
-                .forEach(ator -> System.out.printf("%s com %d premio(s) %n",ator.getKey(),ator.getValue()));
+                .forEach((key, value) -> System.out.println(key
+                        + " com " + value
+                        + (value > 1 ? " prêmios" : " prêmio")));
     }
 
 
