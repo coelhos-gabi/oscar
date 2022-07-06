@@ -3,18 +3,16 @@ package org.example.model;
 import java.util.Objects;
 
 public class DadosOscar {
-    private int index;
-    private int year;
+    private final int index;
+    private final int year;
     private int age;
-    private String name;
-    private String movie;
+    private final String name;
 
     public DadosOscar(int index, int year, int age, String name, String movie) {
         this.index = index;
         this.year = year;
         this.age = age;
         this.name = name;
-        this.movie = movie;
     }
 
     public int getAge() {
@@ -37,4 +35,5 @@ public class DadosOscar {
     public int hashCode() {
         return Objects.hash(name);
     }
+
 }

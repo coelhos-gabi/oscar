@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamUtil<T> {
-    private Stream<String> streamString;
+    private final Stream<String> streamString;
 
     public StreamUtil(Stream<String> streamString) {
         this.streamString = streamString;

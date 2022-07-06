@@ -42,7 +42,7 @@ public class OscarService {
                 .collect(Collectors.groupingBy(DadosOscar::getName, Collectors.counting()))
                 .forEach((key, value) -> System.out.println(key
                         + " com " + value
-                        + (value > 1 ? " prêmios" : " prêmio")));
+                        + (value > 1 ? " prêmios" : "prêmio")));
     }
 
 
